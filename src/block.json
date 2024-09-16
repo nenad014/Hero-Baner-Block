@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/hero-banner-block",
+	"version": "0.1.0",
+	"title": "Hero Banner Block",
+	"category": "widgets",
+	"icon": "format-image",
+	"description": "A custom Gutenberg block for adding a hero banner.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"title" : {
+			"type" : "string",
+			"source": "html",
+			"selector": "h1"
+		},
+		"subtitle" : {
+			"type" : "string",
+			"source": "html",
+			"selector": "p"
+		},
+		"backgroundImage" : {
+			"type" : "string"
+		},
+		"buttonText" : {
+			"type" : "string",
+			"default" : "Learn More"
+		},
+		"buttonUrl" : {
+			"type" : "string",
+			"default" : "#"
+		}
+	},
+	"textdomain": "hero-banner-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
